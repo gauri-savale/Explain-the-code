@@ -19,8 +19,6 @@ def binary_search(arr,x):
     return -1
 arr=[2,4,6,8,10]
 print("Index:", binary_search(arr,6))
-Output:
-Index: 2
 
 
 Q3. Queue using Python (DSA)
@@ -37,6 +35,4 @@ q=Queue()
 q.enqueue(10); q.enqueue(20)
 print("Dequeue:", q.dequeue())
 print("Dequeue:", q.dequeue())
-Output:
-Dequeue: 10
-Dequeue: 20
+
