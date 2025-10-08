@@ -1,0 +1,33 @@
+Q1. Late Binding vs Default Capture (harder)
+def make_funcs():
+funcs = []
+for i in range(4):
+def f(x=i):
+return x + 1
+funcs.append(f)
+return funcs
+fs = make_funcs()
+print([fn() for fn in fs])
+Task: Explain why each function returns different values and what they are.
+
+Q2. In-place List Modification During Iteration
+nums = [1,2,3,4,5]
+for i, v in enumerate(nums):
+if v % 2 == 0:
+nums.pop(i)
+print(nums)
+Task: Explain final contents and why.
+
+Q3. BFS Level Order and Mutation
+from collections import deque
+G = {1:[2,3], 2:[4], 3:[5], 4:[], 5:[]}
+q = deque([1])
+visited = []
+while q:
+u = q.popleft()
+visited.append(u)
+for v in G[u]:
+if v not in visited and v not in q:
+q.append(v)
+print(visited)
+Task: Explain the traversal order and how duplicates are avoided.
