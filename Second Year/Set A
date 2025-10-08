@@ -15,10 +15,7 @@ s.push(10); s.push(20)
 print("Top:", s.peek())
 print("Pop:", s.pop())
 print("Top:", s.peek())
-Output:
-Top: 20
-Pop: 20
-Top: 10
+
 
 Q2. In-place List Modification During Iteration
 nums = [1,2,3,4,5]
