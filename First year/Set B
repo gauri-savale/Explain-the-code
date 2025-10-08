@@ -22,15 +22,18 @@ return 0;
 }
 Task: Explain each pointer assignment and final printed values.
 
-Q3. Function and Static State
+Q3. Prime Number Check
+Task: Check if number is prime.
+Code (C):
 #include <stdio.h>
-void f() {
-static int c = 2;
-printf("%d ", c);
-c *= 2;
-}
 int main() {
-f(); f(); f();
-return 0;
+    int n,i,flag=0;
+    printf("Enter number: "); scanf("%d",&n);
+    for(i=2;i<=n/2;i++){
+        if(n%i==0){ flag=1; break; }
+    }
+    if(flag||n<=1) printf("Not prime");
+    else printf("Prime");
+    return 0;
 }
-Task: What does static do and what are printed values?
+
