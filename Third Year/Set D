@@ -1,0 +1,5 @@
+Q4. Complexity of Recursive Tree Splitting
+def solve(n):
+if n <= 1: return 1
+return solve(n-1) + solve(n-1)
+Task: Give recurrence and time complexity.
