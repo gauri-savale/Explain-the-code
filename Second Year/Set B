@@ -22,6 +22,7 @@ print("Index:", binary_search(arr,6))
 Output:
 Index: 2
 
+
 Q3. Queue using Python (DSA)
 Task: Implement queue with enqueue and dequeue using list.
 Code:
