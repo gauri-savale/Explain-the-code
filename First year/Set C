@@ -1,0 +1,29 @@
+Q1. Precedence and Associativity
+#include <stdio.h>
+int main() {
+int a = 1, b = 2, c = 3;
+int x = a + b * c / a - b;
+printf("%d\n", x);
+return 0;
+}
+Task: Compute x step-by-step respecting precedence.
+
+Q2. Bitwise Toggle
+#include <stdio.h>
+int main() {
+unsigned int x = 29; // binary 0001 1101
+x = x ^ (1 << 3); // toggle bit 3
+printf("%u\n", x);
+return 0;
+}
+Task: Explain what bit is toggled and the new value.
+
+Q3. Conditional (?:) and Side Effect
+#include <stdio.h>
+int main() {
+int a = 0, b = 1;
+int r = a ? ++b : b++;
+printf("%d %d\n", r, b);
+return 0;
+}
+Task: Explain ternary evaluation and final values.
