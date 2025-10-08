@@ -1,0 +1,27 @@
+Q1. Iterator Exhaustion Pitfall
+it = iter([1,2,3])
+print(next(it))
+print(list(it))
+print(next(it))
+Task: Describe outputs and the error (if any).
+
+
+Q2. Sorting Stability Example
+arr = [('a',2), ('b',1), ('c',2), ('d',1)]
+sorted_arr = sorted(arr, key=lambda x: x[1])
+print(sorted_arr)
+Task: Explain stability of Python's sort and resulting order.
+
+Q3. DP Table Build — Longest Common Subsequence
+A = "AGGTAB"
+B = "GXTXAYB"
+n, m = len(A), len(B)
+dp = [[0]*(m+1) for _ in range(n+1)]
+for i in range(1, n+1):
+for j in range(1, m+1):
+if A[i-1] == B[j-1]:
+dp[i][j] = dp[i-1][j-1] + 1
+else:
+dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+print(dp[n][m])
+Task: Explain DP recurrence and printed value.
