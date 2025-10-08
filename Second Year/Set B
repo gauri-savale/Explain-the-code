@@ -6,27 +6,36 @@ return h(n-1) + h(n-3)
 print(h(6))
 Task: Compute h(6) with explanation.
 
-Q2. Generator with send()
-def gen():
-x = 0
-while True:
-received = (yield x)
-if received:
-x += received
-else:
-x += 1
-g = gen()
-print(next(g))
-print(g.send(5))
-print(next(g))
-Task: Explain sequence of yielded values and effects of send.
+Q2. Binary Search (DSA)
+Task: Search element in sorted array iteratively.
+Code:
+def binary_search(arr,x):
+    l,r=0,len(arr)-1
+    while l<=r:
+        m=(l+r)//2
+        if arr[m]==x: return m
+        elif arr[m]<x: l=m+1
+        else: r=m-1
+    return -1
+arr=[2,4,6,8,10]
+print("Index:", binary_search(arr,6))
+Output:
+Index: 2
 
-Q3. Two-sum with dict nuance
-def two_sum(nums, target):
-seen = {}
-for i, x in enumerate(nums):
-if target - x in seen:
-return (seen[target - x], i)
-seen[x] = i
-print(two_sum([2,7,11,15], 9))
-Task: Explain why this returns indices efficiently.
+Q3. Queue using Python (DSA)
+Task: Implement queue with enqueue and dequeue using list.
+Code:
+class Queue:
+    def __init__(self):
+        self.queue=[]
+    def enqueue(self,val):
+        self.queue.append(val)
+    def dequeue(self):
+        return self.queue.pop(0) if self.queue else "Queue Empty"
+q=Queue()
+q.enqueue(10); q.enqueue(20)
+print("Dequeue:", q.dequeue())
+print("Dequeue:", q.dequeue())
+Output:
+Dequeue: 10
+Dequeue: 20
