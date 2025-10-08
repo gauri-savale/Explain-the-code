@@ -1,0 +1,14 @@
+Q2. Detecting Negative Cycle (Bellman-Ford snippet explanation)
+edges = [(0,1,1),(1,2,1),(2,0,
+-3)]
+V = 3
+dist = [float('inf')]*V
+dist[0] = 0
+for _ in range(V-1):
+for u,v,w in edges:
+if dist[u] + w < dist[v]:
+dist[v] = dist[u] + w
+# check
+has_cycle = any(dist[u] + w < dist[v] for u,v,w in edges)
+print(has_cycle)
+Task: Explain why this detects negative cycles and what prints.
