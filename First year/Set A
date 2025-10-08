@@ -1,0 +1,27 @@
+Q1. Double Post-Increment Loop
+#include <stdio.h>
+int main() {
+int i = 0;
+while (i++ < 4)
+printf("%d ", ++i);
+return 0;
+}
+Task: Explain the control flow and predict output.
+
+Q2. Array-of-Pointers Confusion
+#include <stdio.h>
+int main() {
+char *arr[] = {"one", "two", "three"};
+printf("%c %s\n", *++arr[0], arr[1] + 1);
+return 0;
+}
+Task: Explain pointer indexing/precedence and output.
+
+Q3. Two-Dimensional Indexing via Pointer
+#include <stdio.h>
+int main() {
+int m[2][3] = {{1,2,3},{4,5,6}};
+printf("%d %d\n", *(*(m + 1) + 2), m[0][1]);
+return 0;
+}
+Task: Explain the pointer arithmetic to access matrix elements.
